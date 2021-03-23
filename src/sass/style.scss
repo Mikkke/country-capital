@@ -1,0 +1,23 @@
+@import "./reset.scss";
+
+.app {
+  position: relative;
+  height: 100vh;
+  background-image: url("../static/globes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.472);
+    z-index: -1;
+  }
+}
