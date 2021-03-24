@@ -37,7 +37,9 @@ function App() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <button type="submit">Rechercher</button>
+        <button type="submit" className="send">
+          Rechercher
+        </button>
       </form>
 
       {loading === true ? (

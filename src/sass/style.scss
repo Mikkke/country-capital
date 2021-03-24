@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  letter-spacing: 0.09rem;
 }
 
 .loader {
@@ -45,17 +46,27 @@ body {
   z-index: 1;
   color: white;
   form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 7rem;
+    width: 25rem;
+    .send {
+      font-family: "Lato", sans-serif;
+      height: 3rem;
+      font-size: 1rem;
+    }
   }
   .input {
     height: 2rem;
     width: 15rem;
     background: transparent;
     border: 0;
-    border-bottom: 2px solid white;
+    border-bottom: 1.5px solid white;
     outline: none;
     color: white;
     font-size: 1.3rem;
+    font-family: "Lato", sans-serif;
     &::placeholder {
       color: white;
     }
@@ -75,7 +86,6 @@ body {
 
 .container {
   margin-top: 2rem;
-  border: 1px solid yellow;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -84,7 +94,6 @@ body {
 
 .card {
   margin: 2rem;
-  border: 1px solid red;
   padding: 2rem;
   background: black;
   img {
