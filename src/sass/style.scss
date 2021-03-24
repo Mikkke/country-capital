@@ -1,5 +1,36 @@
 @import "./reset.scss";
 
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.loader {
+  margin-top: 12rem;
+  border: 16px solid white;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border-top-color: aqua;
+  border-bottom-color: aquamarine;
+  animation: chargement 4s linear infinite;
+}
+
+@keyframes chargement {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+  }
+  50% {
+    transform: rotate(360deg) scale(1.15);
+  }
+  75% {
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
+}
+
 .app {
   flex-direction: column;
   position: relative;
@@ -10,10 +41,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   z-index: 1;
   color: white;
   form {
-    margin-top: 10rem;
+    margin-top: 7rem;
   }
   .input {
     height: 2rem;
@@ -38,5 +70,24 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.472);
     z-index: -1;
+  }
+}
+
+.container {
+  margin-top: 2rem;
+  border: 1px solid yellow;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 2rem;
+  border: 1px solid red;
+  padding: 2rem;
+  background: black;
+  img {
+    width: 10rem;
   }
 }
