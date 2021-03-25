@@ -49,18 +49,36 @@ function App() {
           {countryData.map((el, index) => {
             return (
               <div className="card" key={index}>
-                <h1>Nom : {el.name} </h1>
-                <h4> Capital :{el.capital}</h4>
-                <h4> Population :{el.population}</h4>
-                <h4> region :{el.region}</h4>
-                <h4> subregion :{el.subregion}</h4>
-                <h4> Indication : +{el.callingCodes[0]}</h4>
+                <h1>
+                  <span>Nom</span> : {el.name}{" "}
+                </h1>
+                <h4>
+                  <span>Capital</span> : {el.capital}
+                </h4>
+                <h4>
+                  {" "}
+                  <span>Population</span> : {el.population}
+                </h4>
+                <h4>
+                  {" "}
+                  <span>Continent</span> : {el.region}
+                </h4>
+                <h4>
+                  {" "}
+                  <span>Sous continent</span> : {el.subregion}
+                </h4>
+                <h4>
+                  {" "}
+                  <span>Indicatif</span> : +{el.callingCodes[0]}
+                </h4>
                 <div>
-                  langue :
+                  <span>Langue</span> :
                   {el.languages.map((el, index) => {
                     return (
-                      <div key={index}>
-                        {el.name} {el.nativeName}
+                      <div className="langue" key={index}>
+                        <p>
+                          {el.name} {el.nativeName}
+                        </p>
                       </div>
                     );
                   })}
@@ -70,9 +88,10 @@ function App() {
                   {el.currencies.map((el, index) => {
                     return (
                       <ul key={index}>
-                        Monnaie :<li>code :{el.code}</li>
-                        <li> nom :{el.name}</li>
-                        <li> symbol :{el.symbol}</li>
+                        <span>Monnaie</span>
+                        <li>code : {el.code}</li>
+                        <li> nom : {el.name}</li>
+                        <li> symbol : {el.symbol}</li>
                       </ul>
                     );
                   })}

@@ -93,10 +93,27 @@ body {
 }
 
 .card {
+  color: black;
   margin: 2rem;
   padding: 2rem;
-  background: black;
+  background: white;
+  height: auto;
+  > * {
+    padding: 0.2rem;
+    margin: 0.2rem;
+  }
+  .langue {
+    display: flex;
+    > * {
+      padding: 0.2rem;
+      margin: 0.2rem;
+    }
+  }
   img {
     width: 10rem;
   }
+}
+span {
+  font-weight: bold;
+  font-size: large;
 }
